@@ -35,7 +35,6 @@ cd uno-soft-task
 ./install_service.sh
 ```
 4. Сгенерировать SSH-ключ и скопировать его в директорию
-
 ```
 ssh-keygen -t ed25519
 cp ~/.ssh/id_ed25519.pub .
@@ -45,4 +44,9 @@ cp ~/.ssh/id_ed25519.pub .
 ```
 sudo docker compose build --no-cache
 sudo docker compose up -d
+```
+
+6. Запустить сервис SSH в контейнере `cassandra-1`
+```
+sudo docker exec -it cassandra-1 service start ssh
 ```
