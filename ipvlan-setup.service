@@ -1,0 +1,10 @@
+[Unit]
+Description=Setup IPvlan interface
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/ipvlan.sh
+
+[Install]
+WantedBy=multi-user.target
