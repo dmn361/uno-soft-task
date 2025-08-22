@@ -10,7 +10,7 @@
 
 # Решение
 
-Выполнялось задание на гипервизоре Virtualbox.
+Выполнялось задание на гипервизоре Virtualbox. Если ваш сетевой интерфейс - не `enp0s3`, то необходимо заменить его в `ipvlan.sh` и `docker-compose.yml`
 
 Ubuntu 24.04 LTS, 4096MB RAM, 50GB Storage, 2 CPUs, Bridge Adapter
 
