@@ -33,8 +33,14 @@ cd uno-soft-task
 ```
 ./install_service.sh
 ```
+4. Сгенерировать SSH-ключ и скопировать его в директорию
 
-4. Собрать и запустить кластер Cassandra
+```
+ssh-keygen -t ed25519
+cp ~/.ssh/id_ed25519.pub .
+```
+
+5. Собрать и запустить кластер Cassandra
 ```
 sudo docker compose build --no-cache
 sudo docker compose up -d
