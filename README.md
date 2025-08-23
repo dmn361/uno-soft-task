@@ -36,8 +36,7 @@ cd uno-soft-task
 ```
 4. Сгенерировать SSH-ключ и скопировать его в директорию
 ```
-ssh-keygen -t ed25519
-cp ~/.ssh/id_ed25519.pub .
+ssh-keygen -t ed25519 && cp ~/.ssh/id_ed25519.pub .
 ```
 
 5. Собрать и запустить кластер Cassandra
