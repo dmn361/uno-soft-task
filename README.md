@@ -12,15 +12,13 @@
 
 Выполнялось задание на гипервизоре Virtualbox. Если ваш сетевой интерфейс - не `enp0s3`, то необходимо заменить его в `ipvlan.sh` и `docker-compose.yml`
 
-Ubuntu 24.04 LTS, 50GB Storage, 2 CPUs, Bridge Adapter
-
-Машина А - 8GB RAM
-
-Машина Б - 4GB RAM
+Ubuntu 24.04 LTS, 50GB Storage, 2 CPUs, 4GB RAM, Bridge Adapter
 
 При установке необходимо задать статические IP-адреса по условию задачи ("Машина А" - 1.197, "Машина Б" - 1.198) в сети 192.168.1.0/24
 
-На "Машине А":
+![Screenshot 2025-08-23 112927.png](https://github.com/dmn361/uno-soft-task/blob/main/pics/Screenshot%202025-08-23%20112927.png)
+
+## На "Машине А":
 
 1. Клонировать репозиторий
 ```
@@ -52,3 +50,23 @@ sudo docker compose up -d
 ```
 sudo docker exec -it cassandra-1 service ssh start
 ```
+
+7. Подключиться к контейнеру `cassandra-1` по SSH
+```
+ssh root@192.168.1.200
+```
+![Screenshot 2025-08-23 160531.png](https://github.com/dmn361/uno-soft-task/blob/main/pics/Screenshot%202025-08-23%20160531.png)
+
+## На "Машине Б"
+
+1. Установить `cqlsh`
+```
+sudo snap install cqlsh
+```
+
+2. Подключиться к необходимому контейнеру
+```
+cqlsh 192.168.1.200 # 201, 202
+```
+
+![Screenshot 2025-08-23 160221.png](https://github.com/dmn361/uno-soft-task/blob/main/pics/Screenshot%202025-08-23%20160221.png)
