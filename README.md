@@ -12,7 +12,11 @@
 
 Выполнялось задание на гипервизоре Virtualbox. Если ваш сетевой интерфейс - не `enp0s3`, то необходимо заменить его в `ipvlan.sh` и `docker-compose.yml`
 
-Ubuntu 24.04 LTS, 4096MB RAM, 50GB Storage, 2 CPUs, Bridge Adapter
+Ubuntu 24.04 LTS, 50GB Storage, 2 CPUs, Bridge Adapter
+
+Машина А - 8GB RAM
+
+Машина Б - 4GB RAM
 
 При установке необходимо задать статические IP-адреса по условию задачи ("Машина А" - 1.197, "Машина Б" - 1.198) в сети 192.168.1.0/24
 
@@ -40,7 +44,7 @@ ssh-keygen -t ed25519 && cp ~/.ssh/id_ed25519.pub .
 
 5. Собрать и запустить кластер Cassandra
 ```
-sudo docker compose build --no-cache
+sudo docker compose build
 sudo docker compose up -d
 ```
 
