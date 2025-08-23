@@ -20,7 +20,6 @@ Ubuntu 24.04 LTS, 4096MB RAM, 50GB Storage, 2 CPUs, Bridge Adapter
 
 1. Клонировать репозиторий
 ```
-sudo apt install -y git
 git clone https://github.com/dmn361/uno-soft-task.git
 cd uno-soft-task
 ```
