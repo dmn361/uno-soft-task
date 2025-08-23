@@ -46,5 +46,5 @@ sudo docker compose up -d
 
 6. Запустить сервис SSH в контейнере `cassandra-1`
 ```
-sudo docker exec -it cassandra-1 service start ssh
+sudo docker exec -it cassandra-1 service ssh start
 ```
